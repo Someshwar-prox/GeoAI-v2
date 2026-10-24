@@ -72,8 +72,8 @@ Done, from two independent audits of the code:
         (2 vCPU / 4 GB, x64), Ubuntu 24.04
       - `https://85-211-194-173.sslip.io` (Caddy + Let's Encrypt)
       - API bound to `127.0.0.1:7860`; only Caddy is public
-- [ ] Push `5a90499` and the latest local docs/handoff commit to GitHub. The
-      VM runs the current local tree; the GitHub repo is two commits behind.
+- [x] Push the final docs and code to GitHub. The public fork is at `3f8d489`;
+      the VM was hot-patched to the same code on 24 October 2026.
 - [ ] Set an Azure budget alert (for example $20 / $50 / $80).
 - [ ] The Geofabrik regional extract, to remove the Overpass dependency.
       The public mirrors are slow and one of them serves a single request at

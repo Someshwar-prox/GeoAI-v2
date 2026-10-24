@@ -138,18 +138,22 @@ docker compose up -d --build
 
 ## Updating the code
 
-The VM currently runs the **local tree**, including commit `5a90499`.
-The GitHub repo (`Someshwar-prox/GeoAI-v2`) is two commits behind
-(`5a90499` and the latest local docs/handoff commit) because the stored GitHub
-credential is the exposed token and has not been replaced yet.
+The VM runs the code in `/home/azureuser/geoai`. On 24 October 2026 it was
+hot-patched to commit `3f8d489` by copying `app/pipeline.py` and `app/slm.py`
+into the running container. The public fork
+(`https://github.com/Someshwar-prox/GeoAI-v2`) is current at the same commit.
+The team repository `DRK28122006/GeoAI` is merged separately; do not push to
+`origin` from this checkout.
 
-Until that commit is pushed:
+The previous files are on the VM as
+`/home/azureuser/geoai/app/*.bak-20261024-120715`.
 
 - Treat `/home/azureuser/geoai` on the VM as the source of truth.
 - Copy changes with `rsync`/`scp`, then `docker compose up -d --build`.
+- A full rebuild re-downloads the 1.1 GB model; allow time for it.
 - Do not clone `GeoAI-v2` over it expecting the same code.
 
-After the final commit is pushed, a clean deploy is:
+A clean deploy from the public fork is:
 
 ```bash
 git clone https://github.com/Someshwar-prox/GeoAI-v2.git
