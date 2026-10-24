@@ -49,7 +49,7 @@ instead of a place name, and `"debug": true`.
 ```json
 {
   "status": "ok",
-  "answer": "Go to ABC Farms around 17:00 on Fri 23 Oct.\n- E_WEATHER: feels like 30C with 0% chance of rain\n- E_AQ: US-AQI 126 locally\n- E_HAZARDS: local exposure index 0.26\n- E_ROUTES: about 3 min away\nCarry: Water bottle, Sunscreen and a hat.\nWatch out for: Elevated local PM2.5 (52 ug/m3).",
+  "answer": "Go to ABC Farms around 17:00 on Fri 23 Oct.\nPreparation: Carry water and wear a mask if the air feels hazy.\n- feels like 30C with 0% chance of rain\n- US-AQI 126 locally\n- local exposure index 0.26\n- about 3 min away\nCarry: Water bottle, Sunscreen and a hat.\nWatch out for: Elevated local PM2.5 (52 ug/m3).\n\nData provided by © OpenStreetMap contributors and Open-Meteo.",
   "request_id": "d17c486ec390",
   "answer_source": "model",
   "parsed": {
